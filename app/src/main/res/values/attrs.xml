@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ColorNumberView">
+        <attr name="number" format="string"/>
+        <attr name="numberColor" format="color"/>
+        <attr name="backgroundColor" format="color"/>
+        <attr name="gapSize" format="dimension"/>
+        <attr name="numberSize" format="dimension"/>
+        <attr name="boxWidth" format="dimension"/>
+        <attr name="boxHeight" format="dimension"/>
+        <attr name="boxRadius" format="dimension"/>
+    </declare-styleable>
+</resources>
