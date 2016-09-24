@@ -3,14 +3,10 @@ package com.kevin.view.colornumber.costumview;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Rect;
 import android.graphics.RectF;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
 
 import com.kevin.view.colornumber.R;
 
@@ -69,7 +65,6 @@ public class ColorNumberView extends View {
         totalGap = mGapSize * (mNumber.length() + 1);
 
 
-
     }
 
     int mCharWidth;
@@ -102,12 +97,76 @@ public class ColorNumberView extends View {
         for (int i = 0; i < mNumber.length(); i++) {
             int curX = baseX + mGapSize * (i + 1) + mCharWidth * i;
             int x = curX + mCharWidth / 2 - mBoxWidth / 2;
-            int y = (mHeight-mBoxHeight)/2;
-            RectF r = new RectF(x,y,x+mBoxWidth,y+mBoxHeight);
+            int y = (mHeight - mBoxHeight) / 2;
+            RectF r = new RectF(x, y, x + mBoxWidth, y + mBoxHeight);
             canvas.drawRoundRect(r, mBoxRadius, mBoxRadius, mBGPaint);
             canvas.drawText(mNumber.substring(i, i + 1), curX, baseY, mNumberPaint);
         }
 
 
+    }
+
+    public String getNumber() {
+        return mNumber;
+    }
+
+    public void setNumber(String number) {
+        this.mNumber = number;
+    }
+
+    public int getNumberColor() {
+        return mNumberColor;
+    }
+
+    public void setNumberColor(int numberColor) {
+        this.mNumberColor = numberColor;
+    }
+
+    public int getBackgroundColor() {
+        return mBackgroundColor;
+    }
+
+    public void setBackgroundColor(int backgroundColor) {
+        this.mBackgroundColor = backgroundColor;
+    }
+
+    public int getNumberSize() {
+        return mNumberSize;
+    }
+
+    public void setNumberSize(int numberSize) {
+        this.mNumberSize = numberSize;
+    }
+
+    public int getGapSize() {
+        return mGapSize;
+    }
+
+    public void setGapSize(int gapSize) {
+        this.mGapSize = gapSize;
+    }
+
+    public int getBoxWidth() {
+        return mBoxWidth;
+    }
+
+    public void setBoxWidth(int boxWidth) {
+        this.mBoxWidth = boxWidth;
+    }
+
+    public int getBoxHeight() {
+        return mBoxHeight;
+    }
+
+    public void setBoxHeight(int boxHeight) {
+        this.mBoxHeight = boxHeight;
+    }
+
+    public int getBoxRadius() {
+        return mBoxRadius;
+    }
+
+    public void setBoxRadius(int boxRadius) {
+        this.mBoxRadius = boxRadius;
     }
 }

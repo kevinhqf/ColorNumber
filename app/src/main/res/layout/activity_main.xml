@@ -20,8 +20,8 @@
         app:boxHeight="30dp"
         app:boxRadius="5dp"
         app:boxWidth="25dp"
-        app:gapSize="20dp"
+        app:gapSize="17dp"
         app:number="145518"
         app:numberColor="#fff"
-        app:numberSize="25sp" />
+        app:numberSize="20sp" />
 </LinearLayout>
